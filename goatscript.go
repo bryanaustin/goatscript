@@ -1,0 +1,3 @@
+package goatscript
+
+// stub
