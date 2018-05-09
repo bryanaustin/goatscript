@@ -2,7 +2,7 @@ package goatscript
 
 import (
 	"fmt"
-	goatdata "goatscript/data"
+	goatdata "goatscript/ast"
 )
 
 // https://blog.golang.org/examples
@@ -24,7 +24,7 @@ func Example() {
 	if err != nil {
 		panic(err)
 	}
-	
+
 	inst1 := templ.CreateInst()
 	inst1.SetIntVariable("var1", 1)
 	inst1.Run()
@@ -37,7 +37,7 @@ func Example() {
 	var1again, _ := inst2.GetIntVariable("var1")
 	fmt.Println(var1again)
 
-	// Output: 
-	// 1
-	// 7
+	// Output:
+	// 2
+	// 6
 }
